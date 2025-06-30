@@ -1,0 +1,148 @@
+import Link from 'next/link';
+import { ReactElement } from 'react';
+import Image from 'next/image';
+
+import { ArticleLink } from './components/article-link';
+import clsx from 'clsx';
+import { getAllPosts } from '@/lib/articles';
+import { Title } from '@/app/components/title';
+
+const projects: {
+  href?: string;
+  title: string;
+  description: string;
+  image: string;
+}[] = [
+  {
+    title: 'Hystruct',
+    href: 'https://www.hystruct.com',
+    description: 'Scrape structured data from the web with AI',
+    image: '/hystruct.png',
+  },
+  {
+    title: 'Linky',
+    href: 'https://lin.ky',
+    description:
+      'A super simple way to create beautiful personal landing pages.',
+    image: '/linky.png',
+  },
+  {
+    title: 'CtrlBuddy',
+    href: 'https://lin.ky',
+    description:
+      'A shell-based LLM assistant with memory and context awareness.Talks to you. Remembers your commands. Slightly unpredictable.',
+    image: '/linky.png',
+  },
+];
+
+export default async function Home() {
+  const posts = await getAllPosts({
+    includeDrafts: process.env.NODE_ENV === 'development',
+  });
+
+  return (
+    <main className="px-4 md:px-0">
+      <section className="pb-14 border-b border-slate-300 mb-14">
+        <h1 className="font-semibold text-4xl mb-4 text-slate-950">
+          Hi, I’m Doc.
+          <span className="block text-slate-500 font-normal text-2xl">
+            I am A builder of things that probably shouldn’t work — but do.
+          </span>
+        </h1>
+        <p className="text-slate-700 text-lg md:text-xl leading-normal">
+        I tinker with tools, sounds, and code to automate life, break stuff on purpose, and occasionally invent something useful. Right now, I'm prototyping a speaker mask and scripting with large language models inside the terminal. I work alone, fueled by curiosity, Linux, and the occasional system crash.
+        </p>
+        <Link
+          href="/info"
+          className="group bg-slate-950 hover:bg-slate-800 transition-colors inline-block mt-8 font-mono text-xs font-semibold rounded-full px-8 py-3 text-white"
+        >
+          More Information{' '}
+          <span className="inline-block group-hover:translate-x-2 transition-transform">
+            →
+          </span>
+        </Link>
+      </section>
+
+      <section className="pb-16">
+        <Title as="h2" variant="secondary" className="mb-4">
+          Personal Projects
+        </Title>
+
+        <p className="text-slate-700 text-lg">
+          Below is a selection of recent projects that I&apos;ve worked on.
+        </p>
+        <div className="lg:w-[170%] lg:-ml-[35%] grid grid-cols-1 md:grid-cols-2 grid-flow-dense gap-8 mt-16">
+          {projects.map((project) => {
+            const isLink = !!project.href;
+            const WrappingComponent = isLink ? Link : 'div';
+
+            return (
+              <WrappingComponent
+                href={project.href ?? '/'}
+                key={project.title}
+                className={clsx(
+                  'flex flex-col justify-center bg-slate-100 hover:bg-slate-200/70 transition-colors rounded-xl p-8'
+                )}
+              >
+                <div className="relative rounded-xl mb-4 shadow-project">
+                  <Image
+                    width={450}
+                    height={240}
+                    quality={90}
+                    src={project.image}
+                    alt=""
+                    className="rounded-xl bg-cover"
+                  />
+                </div>
+                <h3 className="text-slate-700 font-semibold tracking-tight text-xl">
+                  {project.title}
+                </h3>
+                <h3 className="text-slate-500 text-base">
+                  {project.description}
+                </h3>
+              </WrappingComponent>
+            );
+          })}
+        </div>
+
+        <Link
+          href="/projects"
+          className="group bg-slate-950 hover:bg-slate-800 transition-colors inline-block mt-8 font-mono text-xs font-semibold rounded-full px-8 py-3 text-white"
+        >
+          View older projects
+          <span className="inline-block group-hover:translate-x-2 transition-transform">
+            →
+          </span>
+        </Link>
+      </section>
+
+      <section className="pt-10 pb-16">
+        <Title as="h2" variant="secondary" className="mb-8">
+          Recent Writing
+        </Title>
+        <div className="divide-y">
+          {posts.slice(0, 3).map((post) => {
+            return (
+              <ArticleLink
+                key={post?.meta.title}
+                href={post.href}
+                title={post.meta.title}
+                date={post?.date}
+                summary={post.meta.summary}
+              />
+            );
+          })}
+        </div>
+        <Link
+          href="/posts"
+          className="group bg-slate-950 hover:bg-slate-800 transition-colors inline-block mt-8 font-mono text-xs font-semibold rounded-full px-8 py-3 text-white"
+        >
+          View More Posts{' '}
+          <span className="inline-block group-hover:translate-x-2 transition-transform">
+            →
+          </span>
+        </Link>
+      </section>
+    </main>
+  );
+}

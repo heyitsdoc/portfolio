@@ -14,25 +14,18 @@ const projects: {
   image: string;
 }[] = [
   {
-    title: 'Hystruct',
-    href: 'https://www.hystruct.com',
-    description: 'Scrape structured data from the web with AI',
-    image: '/hystruct.png',
+    title: 'Ctrlbuddy/atom',
+    href: '',
+    description: 'A shell-based LLM assistant with memory and context awareness.Talks to you. Remembers your commands. Slightly unpredictable.',
+    image: '/ctrlbuddy.png',
   },
   {
-    title: 'Linky',
-    href: 'https://lin.ky',
-    description:
-      'A super simple way to create beautiful personal landing pages.',
-    image: '/linky.png',
+    title: 'toobox',
+    href: 'https://github.com/heyitsdoc/toolbox',
+    description: 'Its a Script that manages all my other bash Scripts.',
+    image: '/toolbox.png',
   },
-  {
-    title: 'CtrlBuddy',
-    href: 'https://lin.ky',
-    description:
-      'A shell-based LLM assistant with memory and context awareness.Talks to you. Remembers your commands. Slightly unpredictable.',
-    image: '/linky.png',
-  },
+  
 ];
 
 export default async function Home() {
@@ -81,7 +74,7 @@ export default async function Home() {
                 href={project.href ?? '/'}
                 key={project.title}
                 className={clsx(
-                  'flex flex-col justify-center bg-slate-100 hover:bg-slate-200/70 transition-colors rounded-xl p-8'
+                  'flex flex-col justify-center bg-yellow-100 hover:bg-yellow-200/70 transition-colors rounded-xl p-8'
                 )}
               >
                 <div className="relative rounded-xl mb-4 shadow-project">

@@ -87,7 +87,7 @@ export default function RootLayout({
         className={clsx(
           SaansFont.className,
           JetBrainsMonoFont.variable,
-          'bg-slate-50'
+          'bg-yellow-50'
         )}
       >
         <div className="max-w-2xl lg:max-w-xl mx-auto">

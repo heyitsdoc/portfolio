@@ -9,37 +9,26 @@ const experience: {
   date: string;
   logo: string;
 }[] = [
-  {
-    company: 'Mainframe',
-    role: 'Design Engineer',
-    date: 'November 2024 → Present',
-    logo: '/mainframe-logo.jpg',
-  },
-  {
-    company: 'MoonPay',
-    role: 'Senior Front-End Engineer',
-    date: 'April 2022 → August 2024',
-    logo: '/moonpay-logo.jpg',
-  },
-  {
-    company: 'Monzo',
-    role: 'Web Engineer / Product Designer',
-    date: 'May 2019 → November 2021',
-    logo: '/monzo-logo.png',
-  },
-  {
-    company: 'Kalo',
-    role: 'UI Engineer',
-    date: 'February 2017 → May 2019',
-    logo: '/kalo-logo.jpg',
-  },
-  {
-    company: 'Pusher',
-    role: 'Front-end Developer',
-    date: 'September 2015 → January 2017',
-    logo: '/pusher-logo.jpg',
-  },
-];
+    {
+      company: 'Halchal Bal Vikas Sansthan',
+      role: 'Web Developer',
+      date: '',
+      logo: '/halchal.png',
+    },
+    {
+      company: 'Zudio Media',
+      role: 'Web Developer',
+      date: '',
+      logo: '/zudio-media.svg',
+    },
+    {
+      company: 'Business Cradle',
+      role: 'Web Developer intern',
+      date: '',
+      logo: '/building.png',
+    },
+    
+  ];
 
 export default async function InfoPage() {
   return (
@@ -47,35 +36,29 @@ export default async function InfoPage() {
       <PageHeader title="Information" />
       <section className="pb-8 prose prose-lg">
         <p>
-          Hi there, I&apos;m Alex. I build my own products, along side working
-          with some amazing companies to help them build theirs.
-        </p>
-        <p>
-          Most recently, I was working with MoonPay to help build the future of
-          payments. Before that, I was working with Monzo - the fastest growing
-          bank in the UK. Originally joining as a product designer, I
-          transitioned into a web engineer role where I worked with a variety of
-          teams to help rethink modern day banking for their millions of
-          customers.
+          Hey, I’m doc. I build small tools, automations, and systems — mostly with
+          Linux, Bash, and web tech. I’m self-taught and project-driven. Every line
+          of code I write is either solving a real problem or helping me learn
+          something new.
         </p>
 
         <p>
-          I also worked with Kalo (which eventually became Polywork) where I was
-          the first UI Engineering hire. My responsibilities included building
-          out the design system as well as ensuring a high bar of design quality
-          across the product.
+          I’ve been working on things like a command-line assistant powered by LLMs,
+          automating workflows in Linux, and experimenting with audio processing
+          using open source tools. I also maintain my own development setup and
+          workflows across multiple machines.
         </p>
 
         <p>
-          I&apos;ve always bounced somewhere between design and engineering,
-          however the common thread has always been my love for building things
-          that people love to use.
+          I’m currently looking for freelance or contract work — especially projects
+          involving scripting, automation, web tooling, or anything hands-on and
+          experimental. I work best when I’m learning and building at the same time.
         </p>
 
         <p>
-          If you&apos;re interested in working together, feel free to reach out
-          to me here:{' '}
-          <Link href="mailto:hey@alexpate.com">hey@alexpate.com</Link>.
+          If you’re looking for someone curious, fast-learning, and comfortable with
+          unconventional solutions — feel free to reach out: {' '}
+          <Link href="mailto:doc@protonmail.com">doc@protonmail.com</Link>
         </p>
       </section>
 
@@ -109,13 +92,13 @@ export default async function InfoPage() {
           })}
         </div>
 
-        <Link
+        {/* <Link
           href="/resume.pdf"
           target="_blank"
           className="block my-8 text-slate-500 text-sm font-medium"
         >
           Download resume →
-        </Link>
+        </Link> */}
       </section>
     </main>
   );

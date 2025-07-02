@@ -22,45 +22,46 @@ const JetBrainsMonoFont = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Alex Pate - Product Engineer',
+  title: 'Doc - Software Developer',
   description:
-    'Alex Pate is a product engineer based in Milan, working somewhere on the boundary between design and code.',
-  twitter: {
-    card: 'summary_large_image',
-    creator: '@alexjpate',
-    images: ['/og.png'],
-    title: 'Alex Pate - Product Engineer',
-  },
-  openGraph: {
-    type: 'website',
-    title: 'Alex Pate - Product Engineer',
-    description:
-      'Alex Pate is a product engineer based in Milan, working somewhere on the boundary between design and code.',
-    images: [
-      {
-        url: '/og.png',
-        width: 1200,
-        height: 630,
-        alt: 'Alex Pate - Product Engineer',
-      },
-    ],
-    siteName: 'Alex Pate - Product Engineer',
-  },
-  metadataBase: new URL('https://alexpate.com'),
+     'i am a software Developer'
+  // ,
+  // twitter: {
+  //   card: 'summary_large_image',
+  //   creator: '@alexjpate',
+  //   images: ['/og.png'],
+  //   title: 'Alex Pate - Product Engineer',
+  // },
+  // openGraph: {
+  //   type: 'website',
+  //   title: 'Alex Pate - Product Engineer',
+  //   description:
+  //     'Alex Pate is a product engineer based in Milan, working somewhere on the boundary between design and code.',
+  //   images: [
+  //     {
+  //       url: '/og.png',
+  //       width: 1200,
+  //       height: 630,
+  //       alt: 'Alex Pate - Product Engineer',
+  //     },
+  //   ],
+  //   siteName: 'Alex Pate - Product Engineer',
+  // },
+  // metadataBase: new URL('https://alexpate.com'),
 };
 
 const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: 'Alex Pate',
-  image: 'https://alexpate.com/avatar.jpeg',
-  url: 'https://alexpate.com',
-  jobTitle: 'Product Engineer',
-  sameAs: [
-    'https://twitter.com/alexjpate',
-    'https://www.github.com/alexpate',
-    'https://www.linkedin.com/in/alexjpate/',
-  ],
+  // '@context': 'https://schema.org',
+  // '@type': 'Person',
+  // name: 'Alex Pate',
+  // image: 'https://alexpate.com/avatar.jpeg',
+  // url: 'https://alexpate.com',
+  // jobTitle: 'Product Engineer',
+  // sameAs: [
+  //   'https://twitter.com/alexjpate',
+  //   'https://www.github.com/alexpate',
+  //   'https://www.linkedin.com/in/alexjpate/',
+  // ],
 };
 
 export default function RootLayout({
@@ -75,13 +76,13 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        {process.env.NODE_ENV === 'production' && (
+        {/* {process.env.NODE_ENV === 'production' && (
           <Script
             src="https://analytics.ahrefs.com/analytics.js"
             data-key="Lp8HPBxSc/ujln/5tFmj3A"
             defer={true}
           />
-        )}
+        )} */}
       </head>
       <body
         className={clsx(
@@ -124,12 +125,12 @@ export default function RootLayout({
               &copy; 2023 - {new Date().getFullYear()} {'/'} doc
             </p>
             <p>
-              <Link href="https://github.com/alexpate/www">View Source</Link>
+              <Link href="https://github.com/heyitsdoc/portfolio">View Source</Link>
             </p>
           </footer>
         </div>
-        <Analytics />
-        <GoogleAnalytics gaId="G-NRKQPP7M9P" />
+        {/* <Analytics />
+        <GoogleAnalytics gaId="G-NRKQPP7M9P" /> */}
       </body>
     </html>
   );

@@ -43,7 +43,7 @@ export default async function Home() {
           </span>
         </h1>
         <p className="text-slate-700 text-lg md:text-xl leading-normal">
-        I tinker with tools, sounds, and code to automate life, break stuff on purpose, and occasionally invent something useful. Right now, I'm prototyping a speaker mask and scripting with large language models inside the terminal. I work alone, fueled by curiosity, Linux, and the occasional system crash.
+        I tinker with tools, sounds, and code to automate life, break stuff on purpose, and occasionally invent something useful. Right now, I&apos;m prototyping a speaker mask and scripting with large language models inside the terminal. I work alone, fueled by curiosity, Linux, and the occasional system crash.
         </p>
         <Link
           href="/info"

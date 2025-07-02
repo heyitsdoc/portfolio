@@ -1,4 +1,4 @@
-# alexpate.com
+# heyitsdoc.site
 
 👋 Welcome to the source code of my [personal site](https://alexpate.com).
 
@@ -15,3 +15,9 @@ How to get this site running locally:
 ## Say hello!
 
 Feel free to say hello over on twitter [@alexjpate](http://twitter.com/alexjpate).
+
+
+## fork of 
+alex pate [site](https://alexpate.com)..
+
+

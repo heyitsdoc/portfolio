@@ -17,7 +17,7 @@ How to get this site running locally:
 Feel free to say hello over on twitter [@alexjpate](http://twitter.com/alexjpate).
 
 
-## Fork of Alex Pate
+## Fork of Alex 
 twitter [@alexjpate](http://twitter.com/alexjpate).
 alex pate [site](https://alexpate.com)..
 

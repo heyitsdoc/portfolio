@@ -6,7 +6,7 @@
 
 How to get this site running locally:
 
-- `git clone https://github.com/alexpate/www`
+- `git clone https://github.com/heyitsdoc/portfolio`
 - `npm install`
 - To develop the site: `npm run dev`
 - To build the site for production: `npm run build`

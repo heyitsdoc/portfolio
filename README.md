@@ -14,7 +14,7 @@ How to get this site running locally:
 
 ## Say hello!
 
-Feel free to say hello 
+Feel free to say hello to me 
 
 ## Fork of Alex 
 twitter [@alexjpate](http://twitter.com/alexjpate).

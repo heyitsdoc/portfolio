@@ -58,7 +58,7 @@ export default async function InfoPage() {
         <p>
           If you’re looking for someone curious, fast-learning, and comfortable with
           unconventional solutions — feel free to reach out: {' '}
-          <Link href="mailto:doc@protonmail.com">doc@protonmail.com</Link>
+          <Link href="mailto:heyitsdoc@proton.me">heyitsdoc@proton.me</Link>
         </p>
       </section>
 

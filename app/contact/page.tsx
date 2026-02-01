@@ -9,13 +9,13 @@ const contact: {
 }[] = [
   {
     method: 'Email',
-    link: 'mailto:doc@mail.com',
-    label: 'doc@mail.com',
+    link: 'mailto:heyitsdoc@proton.me',
+    label: 'heyitsdoc@proton.me',
   },
   {
     method: 'Twitter',
-    link: 'https://twitter.com/',
-    label: '@heyitsdoc',
+    link: 'https://x.com/doc9023',
+    label: '@doc9023',
   },
   {
     method: 'GitHub',
